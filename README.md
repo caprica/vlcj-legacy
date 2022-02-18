@@ -20,7 +20,6 @@ This dependency is not intended to be used directly by client applications.
 
 [![Maven Central](https://img.shields.io/maven-central/v/uk.co.caprica/vlcj-legacy.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22uk.co.caprica%22%20AND%20a:%22vlcj-legacy%22)
 
-
 ## JNA native methods
 
 The native methods listed here are the last vestiges of JNA used by the vlcj project in its FFI form.
