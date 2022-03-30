@@ -26,13 +26,31 @@ import com.sun.jna.platform.win32.WinReg;
 import java.awt.Component;
 import java.awt.Window;
 
+import static uk.co.caprica.vlcj.legacy.JawtLoader.jawtLoader;
+
+/**
+ * Note that the following methods will attempt to call native API in libjawt, if this library has not been loaded
+ * then the call will fail:
+ *
+ * <ul>
+ *   <li>{@link #getComponentId(Component)}
+ *   <li>{@link #getWindowId(Window)}
+ * </ul>
+ *
+ * To prevent this, any call to either of those methods will trigger a one-time lazy initialisation of a component that
+ * loads the jawt library.
+ *
+ * @see JawtLoader
+ */
 public class LegacyUtils {
 
     public static long getComponentId(Component component) {
+        jawtLoader().loadJawt();
         return Native.getComponentID(component);
     }
 
     public static long getWindowId(Window window) {
+        jawtLoader().loadJawt();
         return Native.getWindowID(window);
     }
 
