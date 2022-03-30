@@ -90,6 +90,7 @@
     <properties>
         <java.version>17</java.version>
         <jna.version>5.10.0</jna.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
