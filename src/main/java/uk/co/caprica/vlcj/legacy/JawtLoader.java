@@ -33,6 +33,9 @@ import java.awt.Window;
  * <p>
  * In this way, the library load is only triggered if the application actually needs it - which would not be the case
  * for example if using JavaFX rather than Swing/AWT.
+ * <p>
+ * Note that there is a seemingly related fix included with JNA 5.11.0, yet it still fails to load libjawt properly, see
+ * <a href="https://github.com/java-native-access/jna/pull/1422">JNA#1422</a>.
  */
 final class JawtLoader {
 
