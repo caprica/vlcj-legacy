@@ -8,7 +8,7 @@
 
     <name>vlcj-legacy</name>
     <description>Legacy components used by the FFI version of vlcj.</description>
-    <url>http://capricasoftware.co.uk/projects/vlcj-legacy</url>
+    <url>https://capricasoftware.co.uk/projects/vlcj-legacy</url>
     <inceptionYear>2022</inceptionYear>
 
     <packaging>jar</packaging>
@@ -23,7 +23,7 @@
 
     <organization>
         <name>Caprica Software Limited</name>
-        <url>http://www.capricasoftware.co.uk</url>
+        <url>https://www.capricasoftware.co.uk</url>
     </organization>
 
     <developers>
@@ -57,11 +57,26 @@
 
     <profiles>
         <profile>
+            <id>sonatype</id>
+            <properties>
+                <gpg.skip>false</gpg.skip>
+            </properties>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>ossrh</id>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+                </snapshotRepository>
+            </distributionManagement>
+        </profile>
+        <profile>
             <id>github</id>
+            <properties>
+                <gpg.skip>false</gpg.skip>
+            </properties>
             <distributionManagement>
                 <snapshotRepository>
                     <id>github</id>
-                    <url>https://maven.pkg.github.com/caprica/vlcj</url>
+                    <url>https://maven.pkg.github.com/caprica/vlcj-legacy</url>
                 </snapshotRepository>
             </distributionManagement>
         </profile>
@@ -88,6 +103,7 @@
     </repositories>
 
     <properties>
+        <gpg.skip>true</gpg.skip>
         <java.version>19</java.version>
         <jna.version>5.12.1</jna.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
