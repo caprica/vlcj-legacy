@@ -37,15 +37,6 @@ call to the JNA native method `getWindowHandle0`. That method uses JNI to provid
 means a JNI shared library is needed on all platforms - clearly this is not desirable since one of the goals of moving
 to FFI is to have a pure Java solution with no extra libraries needed.
 
-Optionally required by vlcj on Windows (to discover the VLC install directory from the Windows Registry):
-
- - Advapi32Util.AdvapiUtil32.getRegistryLocalMachineStringValue
-
-This registry method seems on its face that it should be easier to provide a replacement for, at least when compared
-with the component ID methods. However, it seems that it is necessary to deal with issues like ASCII vs wide characters
-in the Win32 API, making things a little more difficult. On the plus side, a general solution is not required here, it
-is only necessary to get the VLC install path, nothing more.
-
 ## Present status and possible ways forward
 
 For the native component ID method replacements, this is currently at an impasse and suggestions would be welcomed.
@@ -54,9 +45,6 @@ Long ago in the early days of vlcj, various reflection tricks were used to grab 
 Java classes themselves. Those tricks were different on every platform of course. This approach may yet be feasible,
 however even if that might work (and it is not 100% certain that it will) there is the added complication of having to
 use the Java Module System and whatever constraints it may impose on the solution.
-
-For the registry method replacement, this is certainly possible to do, but just requires someone to do the work, and
-ideally someone that knows the Win32 API.
 
 ## Contributions are welcome
 

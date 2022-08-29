@@ -20,8 +20,6 @@
 package uk.co.caprica.vlcj.legacy;
 
 import com.sun.jna.Native;
-import com.sun.jna.platform.win32.Advapi32Util;
-import com.sun.jna.platform.win32.WinReg;
 
 import java.awt.Component;
 import java.awt.Window;
@@ -44,18 +42,26 @@ import static uk.co.caprica.vlcj.legacy.JawtLoader.jawtLoader;
  */
 public class LegacyUtils {
 
+    /**
+     * Get the native component identifier for the given component.
+     *
+     * @param component component
+     * @return native component identifier
+     */
     public static long getComponentId(Component component) {
         jawtLoader().loadJawt();
         return Native.getComponentID(component);
     }
 
+    /**
+     * Get the native window identifier for the given component.
+     *
+     * @param window window
+     * @return native component identifier
+     */
     public static long getWindowId(Window window) {
         jawtLoader().loadJawt();
         return Native.getWindowID(window);
-    }
-
-    public static String getRegistryLocalMachineStringValue(String key, String value) {
-        return Advapi32Util.registryGetStringValue(WinReg.HKEY_LOCAL_MACHINE, key, value);
     }
 
     private LegacyUtils() {}
