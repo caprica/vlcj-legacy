@@ -24,7 +24,7 @@ This dependency is not intended to be used directly by client applications.
 
 The native methods listed here are the last vestiges of JNA used by the vlcj project in its FFI form.
 
-Critically required by vlcj on Linux and Windows (for embedding of native video output in Java components:
+Critically required by vlcj on Linux and Windows (for embedding of native video output in Java Swing/AWT components):
 
  - Native.getComponentID
 
