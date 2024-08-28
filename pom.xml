@@ -7,7 +7,7 @@
     <version>1.0.1-SNAPSHOT</version>
 
     <name>vlcj-legacy</name>
-    <description>Legacy components used by the FFI version of vlcj.</description>
+    <description>Legacy components used by the FFM API version of vlcj.</description>
     <url>https://capricasoftware.co.uk/projects/vlcj-legacy</url>
     <inceptionYear>2022</inceptionYear>
 
