@@ -4,7 +4,7 @@
 
     <groupId>uk.co.caprica</groupId>
     <artifactId>vlcj-legacy</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
 
     <name>vlcj-legacy</name>
     <description>Legacy components used by the FFI version of vlcj.</description>
@@ -52,7 +52,7 @@
         <connection>scm:git:git@github.com:caprica/vlcj-legacy.git</connection>
         <developerConnection>scm:git:git@github.com:caprica/vlcj-legacy.git</developerConnection>
         <url>git@github.com:caprica/vlcj-legacy.git</url>
-        <tag>vlcj-legacy-1.0.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <profiles>
