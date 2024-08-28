@@ -7,6 +7,5 @@ module uk.co.caprica.vlcj.legacy {
     requires java.desktop;
 
     exports uk.co.caprica.vlcj.legacy to
-        uk.co.caprica.vlcj,
-        uk.co.caprica.vlcj.ffi;
+        uk.co.caprica.vlcj;
 }
