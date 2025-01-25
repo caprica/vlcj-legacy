@@ -3,11 +3,11 @@
 vlcj-legacy
 ===========
 
-The vlcj project ultimately will move to Java FFI for its native bindings rather than relying on the currently-used, and
+The vlcj project ultimately will move to Java FFM for its native bindings rather than relying on the currently-used, and
 undoubtedly excellent, JNA project.
 
 This small project provides a bridge to a few JNA native methods that are currently still needed by vlcj, even when
-using FFI, and that are not straightforward or are otherwise difficult to replace.
+using FFM, and that are not straightforward or are otherwise difficult to replace.
 
 This is intended to be a short-term project to support the decoupling of JNA from vlcj, and the end-goal is to provide
 appropriate replacements for these still used JNA methods.
@@ -35,7 +35,9 @@ Optionally required by vlcj on Linux (for the native X11 full-screen strategy im
 Note that for `getComponentID` and `getWindowID` these two methods are actually the same, both ultimately ending up in a
 call to the JNA native method `getWindowHandle0`. That method uses JNI to provide the necessary functionality, and that
 means a JNI shared library is needed on all platforms - clearly this is not desirable since one of the goals of moving
-to FFI is to have a pure Java solution with no extra libraries needed.
+to FFM is to have a pure Java solution with no extra libraries needed.
+
+The FFM project will ship its own native library providing the same functionality without the JNA dependency.
 
 ## Present status and possible ways forward
 
