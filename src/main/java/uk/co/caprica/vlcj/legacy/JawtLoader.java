@@ -1,3 +1,4 @@
+
 /*
  * This file is part of VLCJ.
  *
@@ -14,7 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with VLCJ.  If not, see <http://www.gnu.org/licenses/>.
  *
- * Copyright 2022 Caprica Software Limited.
+ * Copyright 2022-2025 Caprica Software Limited.
  */
 
 package uk.co.caprica.vlcj.legacy;
